@@ -9,7 +9,7 @@ VERSION : 0.1
 BEGIN
 	#iVar := 2;
 	
-	
+	#iVar := #iVar;
 	
 	
 END_FUNCTION_BLOCK
