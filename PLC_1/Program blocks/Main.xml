@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2022-03-18T11:15:12.0588216Z</Created>
+    <Created>2022-03-18T16:01:16.9065174Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -123,8 +123,41 @@
       </MultilingualText>
       <SW.Blocks.CompileUnit ID="9" CompositionName="CompileUnits">
         <AttributeList>
-          <NetworkSource />
-          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
+  <LineComment Inserted="false" NoClosingBracket="false" UId="21">
+    <Text UId="22"> "M1_out".sp_speed := "M1_out".sp_speed + 1;</Text>
+  </LineComment>
+  <NewLine Num="1" UId="23" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="24">
+    <Text UId="25"> IF "M1_out".sp_speed &gt; 10000 THEN</Text>
+  </LineComment>
+  <NewLine Num="1" UId="26" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="27">
+    <Text UId="28">     "M1_out".sp_speed := 0;</Text>
+  </LineComment>
+  <NewLine Num="1" UId="29" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="30">
+    <Text UId="31"> END_IF;</Text>
+  </LineComment>
+  <NewLine Num="2" UId="32" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="33">
+    <Text UId="34"> "M1_out".sp_acc := "M1_out".sp_acc + 1;</Text>
+  </LineComment>
+  <NewLine Num="1" UId="35" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="36">
+    <Text UId="37"> IF "M1_out".sp_acc &gt; 10000 THEN</Text>
+  </LineComment>
+  <NewLine Num="1" UId="38" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="39">
+    <Text UId="40">     "M1_out".sp_acc := 0;</Text>
+  </LineComment>
+  <NewLine Num="1" UId="41" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="42">
+    <Text UId="43"> END_IF;</Text>
+  </LineComment>
+  <NewLine Num="3" UId="44" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="A" CompositionName="Comment">
@@ -184,7 +217,7 @@
               <MultilingualTextItem ID="14" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>test velocità lettura dati</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="15" CompositionName="Items">
@@ -224,142 +257,40 @@
       <SW.Blocks.CompileUnit ID="1A" CompositionName="CompileUnits">
         <AttributeList>
           <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
-  <Access Scope="GlobalVariable" UId="21">
-    <Symbol UId="22">
-      <Component Name="M1_out" UId="23" />
-      <Token Text="." UId="24" />
-      <Component Name="sp_speed" UId="25" />
-    </Symbol>
+  <Access Scope="Call" UId="21">
+    <CallInfo UId="22" BlockType="FB" Name="device_control">
+      <Instance Scope="GlobalVariable" UId="23">
+        <Component Name="M1_instance_DB" UId="24" />
+      </Instance>
+      <Token Text="(" UId="25" />
+      <Parameter Name="M_in" UId="26">
+        <Blank Num="1" UId="27" />
+        <Token Text=":=" UId="28" />
+        <Blank Num="1" UId="29" />
+        <Access Scope="GlobalVariable" UId="30">
+          <Symbol UId="31">
+            <Component Name="M1_in" UId="32" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="33" />
+      <NewLine Num="1" UId="34" />
+      <Blank Num="17" UId="35" />
+      <Parameter Name="M_out" UId="36">
+        <Blank Num="1" UId="37" />
+        <Token Text="=&gt;" UId="38" />
+        <Blank Num="1" UId="39" />
+        <Access Scope="GlobalVariable" UId="40">
+          <Symbol UId="41">
+            <Component Name="M1_out" UId="42" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="44" />
+    </CallInfo>
   </Access>
-  <Blank Num="1" UId="26" />
-  <Token Text=":=" UId="27" />
-  <Blank Num="1" UId="28" />
-  <Access Scope="GlobalVariable" UId="29">
-    <Symbol UId="30">
-      <Component Name="M1_out" UId="31" />
-      <Token Text="." UId="32" />
-      <Component Name="sp_speed" UId="33" />
-    </Symbol>
-  </Access>
-  <Blank Num="1" UId="34" />
-  <Token Text="+" UId="35" />
-  <Blank Num="1" UId="36" />
-  <Access Scope="LiteralConstant" UId="37">
-    <Constant UId="38">
-      <ConstantValue UId="40">1</ConstantValue>
-    </Constant>
-  </Access>
-  <Token Text=";" UId="41" />
-  <NewLine Num="1" UId="42" />
-  <Token Text="IF" UId="43" />
-  <Blank Num="1" UId="44" />
-  <Access Scope="GlobalVariable" UId="45">
-    <Symbol UId="46">
-      <Component Name="M1_out" UId="47" />
-      <Token Text="." UId="48" />
-      <Component Name="sp_speed" UId="49" />
-    </Symbol>
-  </Access>
-  <Blank Num="1" UId="50" />
-  <Token Text="&gt;" UId="51" />
-  <Blank Num="1" UId="52" />
-  <Access Scope="LiteralConstant" UId="53">
-    <Constant UId="54">
-      <ConstantValue UId="56">10000</ConstantValue>
-    </Constant>
-  </Access>
-  <Blank Num="1" UId="57" />
-  <Token Text="THEN" UId="58" />
-  <NewLine Num="1" UId="59" />
-  <Blank Num="4" UId="60" />
-  <Access Scope="GlobalVariable" UId="61">
-    <Symbol UId="62">
-      <Component Name="M1_out" UId="63" />
-      <Token Text="." UId="64" />
-      <Component Name="sp_speed" UId="65" />
-    </Symbol>
-  </Access>
-  <Blank Num="1" UId="66" />
-  <Token Text=":=" UId="67" />
-  <Blank Num="1" UId="68" />
-  <Access Scope="LiteralConstant" UId="69">
-    <Constant UId="70">
-      <ConstantValue UId="72">0</ConstantValue>
-    </Constant>
-  </Access>
-  <Token Text=";" UId="73" />
-  <NewLine Num="1" UId="74" />
-  <Token Text="END_IF" UId="75" />
-  <Token Text=";" UId="76" />
-  <NewLine Num="2" UId="77" />
-  <Access Scope="GlobalVariable" UId="78">
-    <Symbol UId="79">
-      <Component Name="M1_out" UId="80" />
-      <Token Text="." UId="81" />
-      <Component Name="sp_acc" UId="82" />
-    </Symbol>
-  </Access>
-  <Blank Num="1" UId="83" />
-  <Token Text=":=" UId="84" />
-  <Blank Num="1" UId="85" />
-  <Access Scope="GlobalVariable" UId="86">
-    <Symbol UId="87">
-      <Component Name="M1_out" UId="88" />
-      <Token Text="." UId="89" />
-      <Component Name="sp_acc" UId="90" />
-    </Symbol>
-  </Access>
-  <Blank Num="1" UId="91" />
-  <Token Text="+" UId="92" />
-  <Blank Num="1" UId="93" />
-  <Access Scope="LiteralConstant" UId="94">
-    <Constant UId="95">
-      <ConstantValue UId="97">1</ConstantValue>
-    </Constant>
-  </Access>
-  <Token Text=";" UId="98" />
-  <NewLine Num="1" UId="99" />
-  <Token Text="IF" UId="100" />
-  <Blank Num="1" UId="101" />
-  <Access Scope="GlobalVariable" UId="102">
-    <Symbol UId="103">
-      <Component Name="M1_out" UId="104" />
-      <Token Text="." UId="105" />
-      <Component Name="sp_acc" UId="106" />
-    </Symbol>
-  </Access>
-  <Blank Num="1" UId="107" />
-  <Token Text="&gt;" UId="108" />
-  <Blank Num="1" UId="109" />
-  <Access Scope="LiteralConstant" UId="110">
-    <Constant UId="111">
-      <ConstantValue UId="113">10000</ConstantValue>
-    </Constant>
-  </Access>
-  <Blank Num="1" UId="114" />
-  <Token Text="THEN" UId="115" />
-  <NewLine Num="1" UId="116" />
-  <Blank Num="4" UId="117" />
-  <Access Scope="GlobalVariable" UId="118">
-    <Symbol UId="119">
-      <Component Name="M1_out" UId="120" />
-      <Token Text="." UId="121" />
-      <Component Name="sp_acc" UId="122" />
-    </Symbol>
-  </Access>
-  <Blank Num="1" UId="123" />
-  <Token Text=":=" UId="124" />
-  <Blank Num="1" UId="125" />
-  <Access Scope="LiteralConstant" UId="126">
-    <Constant UId="127">
-      <ConstantValue UId="129">0</ConstantValue>
-    </Constant>
-  </Access>
-  <Token Text=";" UId="130" />
-  <NewLine Num="1" UId="131" />
-  <Token Text="END_IF" UId="132" />
-  <Token Text=";" UId="133" />
-  <NewLine Num="3" UId="134" />
+  <Token Text=";" UId="45" />
+  <NewLine Num="2" UId="46" />
 </StructuredText></NetworkSource>
           <ProgrammingLanguage>SCL</ProgrammingLanguage>
         </AttributeList>
@@ -421,7 +352,7 @@
               <MultilingualTextItem ID="25" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>Motore 1</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="26" CompositionName="Items">
