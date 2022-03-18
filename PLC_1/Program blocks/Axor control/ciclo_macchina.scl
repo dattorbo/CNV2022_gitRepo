@@ -16,6 +16,9 @@ BEGIN
 	
 	
 	REGION M1_parametri
+	    "M1_instance_DB".startMotor := "M1_datiCiclo_DB".M1_startProfilo;
+	    "M1_instance_DB".M_out.set_mode_op := 3; //Profile Velocity
+	    
 	    "M1_instance_DB".M_out.sp_speed := ("M1_datiCiclo_DB".M1_SP_Velocity * 65536) / "M1_datiCiclo_DB".M1_F;
 	    "M1_instance_DB".M_out.sp_acc := ("M1_datiCiclo_DB".M1_SP_Acc * 65536) / "M1_datiCiclo_DB".M1_F;
 	    "M1_instance_DB".M_out.sp_dec := ("M1_datiCiclo_DB".M1_SP_Dec * 65536) / "M1_datiCiclo_DB".M1_F;
