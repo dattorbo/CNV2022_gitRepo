@@ -2,9 +2,9 @@
 VERSION : 0.1
    STRUCT
       statusword : "M_in_status_w";
-      act_speed { S7_SetPoint := 'True'} : DInt;   // Velocity Actual Value
-      last_alarm { S7_SetPoint := 'True'} : UInt;   // Error Code
-      curr_mode_operation { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Byte;   // Modes Of Operation Display
+      act_speed { S7_SetPoint := 'True'} : DInt;   // Velocity Actual Value - 606Ch
+      last_alarm { S7_SetPoint := 'True'} : UInt;   // Error Code - 603Fh
+      curr_mode_operation { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Byte;   // Modes Of Operation Display - 6061h
    END_STRUCT;
 
 END_TYPE

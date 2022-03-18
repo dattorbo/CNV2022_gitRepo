@@ -2,11 +2,11 @@
 VERSION : 0.1
    STRUCT
       controlword { S7_SetPoint := 'False'} : "M_out_control_w";
-      sp_speed { S7_SetPoint := 'True'} : DInt;   //  Target Velocity
-      sp_acc { S7_SetPoint := 'True'} : DWord;   // Profile Acceleration
-      sp_dec { S7_SetPoint := 'True'} : DWord;   // Profile Deceleration
-      sp_q_stop { S7_SetPoint := 'True'} : DWord;   // Quick Stop Deceleration
-      set_mode_op { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Byte;   //  Modes Of Operation
+      sp_speed { S7_SetPoint := 'True'} : DInt;   // Target Velocity - 60FFh
+      sp_acc { S7_SetPoint := 'True'} : DWord;   // Profile Acceleration - 6083h
+      sp_dec { S7_SetPoint := 'True'} : DWord;   // Profile Deceleration - 6084h
+      sp_q_stop { S7_SetPoint := 'True'} : DWord;   // Quick Stop Deceleration - 6085h
+      set_mode_op { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Byte;   // Modes Of Operation - 6060h
    END_STRUCT;
 
 END_TYPE
