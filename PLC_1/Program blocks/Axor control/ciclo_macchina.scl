@@ -1,0 +1,35 @@
+﻿FUNCTION_BLOCK "ciclo_macchina"
+TITLE = axor
+{ S7_Optimized_Access := 'TRUE' }
+AUTHOR : Frj
+VERSION : 0.1
+
+BEGIN
+	REGION Profilo ciclico
+	    
+	    
+	END_REGION
+	
+	
+	
+	
+	
+	
+	REGION M1_parametri
+	    "M1_instance_DB".M_out.sp_speed := ("M1_datiCiclo_DB".M1_SP_Velocity * 65536) / "M1_datiCiclo_DB".M1_F;
+	    "M1_instance_DB".M_out.sp_acc := ("M1_datiCiclo_DB".M1_SP_Acc * 65536) / "M1_datiCiclo_DB".M1_F;
+	    "M1_instance_DB".M_out.sp_dec := ("M1_datiCiclo_DB".M1_SP_Dec * 65536) / "M1_datiCiclo_DB".M1_F;
+	    "M1_instance_DB".M_out.sp_q_stop := ("M1_datiCiclo_DB".M1_SP_QuickStop * 65536) / "M1_datiCiclo_DB".M1_F;
+	    
+	    
+	END_REGION
+	
+	
+	
+	
+	
+	
+	
+	
+END_FUNCTION_BLOCK
+
