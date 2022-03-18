@@ -1,0 +1,51 @@
+﻿FUNCTION_BLOCK "device_control"
+TITLE = axor
+{ S7_Optimized_Access := 'TRUE' }
+AUTHOR : Frj
+VERSION : 0.1
+   VAR 
+      step { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Int;
+   END_VAR
+
+   VAR CONSTANT 
+      start : Int := 0;
+      not_ready_to_switch_on : Int := 1;
+      switch_on_disable : Int := 2;
+      ready_to_switch_on : Int := 3;
+      switch_on : Int := 4;
+      operation_enable : Int := 5;
+      quick_stop_active : Int := 6;
+      fault : Int := 7;
+   END_VAR
+
+
+BEGIN
+	
+	
+	
+	
+	
+	
+	CASE #step OF
+	    #start:  // Statement section case 1
+	        ;
+	    #not_ready_to_switch_on:  // Statement section case 2 to 4
+	        ;
+	    #switch_on_disable:  // Statement section case 1
+	        ;
+	    #ready_to_switch_on:  // Statement section case 2 to 4
+	        ;
+	    #switch_on:  // Statement section case 1
+	        ;
+	    #operation_enable:  // Statement section case 2 to 4
+	        ;
+	    #quick_stop_active:  // Statement section case 1
+	        ;
+	    #fault:  // Statement section case 2 to 4
+	        ;
+	END_CASE;
+	
+	
+	
+END_FUNCTION_BLOCK
+

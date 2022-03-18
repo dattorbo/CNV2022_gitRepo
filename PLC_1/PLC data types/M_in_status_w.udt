@@ -1,0 +1,23 @@
+﻿TYPE "M_in_status_w"
+VERSION : 0.1
+   STRUCT
+      bit_0 : Bool;   // Ready to Switch On
+      bit_1 : Bool;   // Switch On
+      bit_2 : Bool;   // Operation Enabled
+      bit_3 : Bool;   // Fault
+      bit_4 : Bool;   // Voltage Enabled
+      bit_5 : Bool;   // Quick Stop
+      bit_6 : Bool;   // Switch On Disable
+      bit_7 : Bool;   // Warning (not used in Axor’s drives)
+      bit_8 : Bool;   // Manufacturer specific (not used in Axor’s drives)
+      bit_9 : Bool;   // Remote (not used in Axor’s drives)
+      bit_10 : Bool;   // Target Reached
+      bit_11 : Bool;   // Internal Limit Active
+      bit_12 : Bool;   // Speed (standstill)
+      bit_13 : Bool;   // Max sleep error (not used in Axor’s drives)
+      bit_14 : Bool;   // Manufacturer specific (not used in Axor’s drives)
+      bit_15 : Bool;   // Manufacturer specific (not used in Axor’s drives)
+   END_STRUCT;
+
+END_TYPE
+
