@@ -1,0 +1,12 @@
+﻿DATA_BLOCK "instance_ciclo_mac"
+{ DB_Accessible_From_OPC_UA := 'FALSE' ;
+ S7_Optimized_Access := 'TRUE' }
+AUTHOR : Frj
+VERSION : 0.1
+NON_RETAIN
+"ciclo_macchina"
+
+BEGIN
+
+END_DATA_BLOCK
+
