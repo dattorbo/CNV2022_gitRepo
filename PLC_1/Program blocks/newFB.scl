@@ -1,7 +1,16 @@
 ﻿FUNCTION_BLOCK "newFB"
 { S7_Optimized_Access := 'TRUE' }
 VERSION : 0.1
+   VAR 
+      iVar { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Int;
+   END_VAR
+
 
 BEGIN
+	#iVar := 2;
+	
+	
+	
+	
 END_FUNCTION_BLOCK
 
