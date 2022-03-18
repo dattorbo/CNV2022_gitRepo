@@ -7,6 +7,7 @@ NON_RETAIN
 "device_control"
 
 BEGIN
+   M_out.set_mode_op := 16#03;
 
 END_DATA_BLOCK
 

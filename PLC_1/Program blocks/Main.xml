@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2022-03-18T16:01:16.9065174Z</Created>
+    <Created>2022-03-18T16:55:07.1321486Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -290,7 +290,18 @@
     </CallInfo>
   </Access>
   <Token Text=";" UId="45" />
-  <NewLine Num="2" UId="46" />
+  <NewLine Num="3" UId="46" />
+  <Access Scope="Call" UId="47">
+    <CallInfo UId="48" BlockType="FB" Name="ciclo_macchina">
+      <Instance Scope="GlobalVariable" UId="49">
+        <Component Name="instance_ciclo_mac" UId="50" />
+      </Instance>
+      <Token Text="(" UId="51" />
+      <Token Text=")" UId="52" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="53" />
+  <NewLine Num="2" UId="54" />
 </StructuredText></NetworkSource>
           <ProgrammingLanguage>SCL</ProgrammingLanguage>
         </AttributeList>
